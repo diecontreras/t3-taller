@@ -1,0 +1,54 @@
+/* info */
+
+.info {
+  margin-left: 50px;
+  border: 2px solid black;
+  align-items: justify;
+}
+
+.boton {
+  align-self: center;
+}
+
+.airplane-container {
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  font-size: calc(9px + 1vmin);
+  color: black;
+  border: 1px solid black;
+}
+
+.pipul {
+  margin-left: 20px;
+  justify-content: left;
+}
+
+/* Chat */
+
+.chat {
+  border: 2px black;
+  text-align: justify;
+  margin-left: 50px;
+}
+
+.chat-inputs {
+  min-height: auto;
+  text-align: justify;
+}
+
+.chat-window {
+  border: 1px black;
+}
+
+/* Mapa */
+
+.mapa {
+  margin-left: 50px;
+}
+
+.Popup{
+  font-size: calc(10px);
+}
