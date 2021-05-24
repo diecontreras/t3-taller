@@ -9,24 +9,17 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <div className="row">
         <div className="map-container"> 
           <Mapa />
         </div>
         <div className="info-container">
           <Info />
         </div>
-        </div>
-
-
-        
         <div className="chat-container">
           <Chat />
         </div>
       </header>
-      <footer className="footer"> 
-
-      </footer>
+      <footer className="footer"></footer>
     </div>
   );
 }
