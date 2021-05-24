@@ -13,13 +13,11 @@ function Chat() {
   const [response, setResponse] = useState("");
   const [name, setName] = useState("");
 
-
   function sendResponse(){
     socket.emit('CHAT', {
       name: name, 
       message: response
     });
-
   }
 
   function showMessage (res, index) {
@@ -58,7 +56,6 @@ function Chat() {
           placeholder="Escribe algo..." onChange={(i) => setResponse(i.target.value)}/>
 
         <button onClick={() => sendResponse()} >Enviar</button>
-
 
       </div>
     </div>

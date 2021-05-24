@@ -16,8 +16,7 @@ function Mapa(){
 
   function setLine (avion, i) {
     const polyline = [avion.origin, avion.destination];
-    const blackOption = {color : 'black'};
-    return <Polyline key={i} pathOptions={blackOption} positions={polyline} />
+    return <Polyline key={i} positions={polyline} />
   }
   
   function setMarker (avion) {
@@ -28,11 +27,10 @@ function Mapa(){
 
   function setPath (avion, i) {
     const multiline = trace[avion];
-    const redOption = {color : 'red'};
-    return <Polyline key={i} pathOptions={redOption} positions={multiline} />
+    const redOption = 'green';
+    return <Polyline key={i} color={redOption} positions={multiline} />
   }
   
-
   useEffect(() => {  
     socket.on('POSITION', data => {
       // poblar plane
@@ -54,7 +52,6 @@ function Mapa(){
     return () => socket.disconnect();
   }, []);
   
-  
   useEffect(() => {
     socket.on('FLIGHTS', data => {
       setAirplanes((prevState) => [...prevState, ...data]);
@@ -64,7 +61,6 @@ function Mapa(){
 
     return () => socket.disconnect();
   }, []);
-
 
   return (
   
@@ -84,11 +80,8 @@ function Mapa(){
 
       {Object.keys(trace).map((key) => setPath(key))}
 
-
     </Map>
-
-
-    </div>
+  </div>
   );
 }
 
