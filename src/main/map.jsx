@@ -27,8 +27,8 @@ function Mapa(){
 
   function setPath (avion, i) {
     const multiline = trace[avion];
-    const redOption = 'green';
-    return <Polyline key={i} color={redOption} positions={multiline} />
+    const greenOption = 'green';
+    return <Polyline key={i} color={greenOption} positions={multiline} />
   }
   
   useEffect(() => {  
@@ -78,7 +78,7 @@ function Mapa(){
       
       {Object.keys(plane).map((key) => setMarker(key))}
 
-      {Object.keys(trace).map((key) => setPath(key))}
+      {Object.keys(trace).map((key, i) => setPath(key, i))}
 
     </Map>
   </div>
